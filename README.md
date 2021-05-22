@@ -8,3 +8,7 @@ Publishers + Subscribers = Observer Pattern
 
 ![alt text](https://github.com/sameesh-s/DesignPatterns/blob/main/ObserverPattern.jpg?raw=true)
 
+> Strive for loosely coupled designs between objects that interact.  
+
+loosly coupled designs allow us to build flexible OOSystems that can handle change because they minimize the interdependency between objects.  
+
