@@ -32,3 +32,13 @@ push and pull scenario in Observer , pull seems better. (fetching data from insi
 * The Observer pattern is related to Publish/Subscribe Pattern which is more complex situations with multiple Subjects and/or multiple message types.  
 * The Observer pattern is commonly used pattern, and it is used in MVC also.  
 
+## Decorator Pattern 
+
+The Decorator Pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality. 
+Solution for class explosion related to inheritance.  
+
+> Classes should be open for extension, but closed for modification.  
+
+our goal is to allow classes to be easily extended to incorporate new behavior without modifying existing code. What do we get if we accomplish this? Designs that are resilient to change and flexible enough to take on new functionality to meet changing requirements.  
+[NOTE] be careful when choosing the areas of code that need to be extended, applying the Open-closed principle EVERYWHERE is wasteful and unnecessary, and can lead to complex, hard to understand code.  
+
