@@ -42,3 +42,38 @@ Solution for class explosion related to inheritance.
 our goal is to allow classes to be easily extended to incorporate new behavior without modifying existing code. What do we get if we accomplish this? Designs that are resilient to change and flexible enough to take on new functionality to meet changing requirements.  
 [NOTE] be careful when choosing the areas of code that need to be extended, applying the Open-closed principle EVERYWHERE is wasteful and unnecessary, and can lead to complex, hard to understand code.  
 
+## Facade Pattern
+
+Put a basic class and masks some of those things that were going on behind the object behind it, It's just dealing with making a simpler interface to the client.  
+* Simplifies client Interface 
+* Easy pattern to implement 
+* Refactoring pattern  
+* Make an API easier to use
+* reduce dependencies on outside code 
+* Simplify the interface or client useage (wrap complex code within interface using this facade to make to simpler to use for enduser) 
+* Usually a refactoring pattern 
+* eg. java.net.URL
+	javax.faces.context.FacesContext  
+In case if build a JDBC components in facade pattern we will be hiding all the complex logic related to statement and connection management and all behind a facade and we will provide simple methods to the enduser to access like createTable() inside the facade and map all the complex methods inside facade method. 
+
+### Design
+* Class that utilizes composition 
+* Shouldn't have a need for inheritance( if you think you need inheritence you probably will need to use another pattern)    
+* Typically encompasses full lifecycle  
+![Facade Pattern UML](https://github.com/sameesh-s/DesignPatterns/blob/main/FacadePattern.jpg?raw=true)
+
+### Pitfalls  
+* Typically used to clean up code 
+* Should think about API design( if another pattern solve the problem then take that instead of Facade)  
+* Shouldn't use the inheritance so Facade uses Flat problem/structure  
+* The "Singleton" of Structural Pattern( often misused( to hide ugly things that are into the code) or overused in strucutral pattern)  
+
+### Contrast to Other patterns   
+| Facade                        |Adapter                        |
+|-------------------------------|:-----------------------------:|
+|Simplifies Interface           | Also a Refactoring pattern    |
+|Works with composites          | Modifies behaviour(adds)      |
+|Cleaner API                    | Provides a different API      |
+
+
+ 
