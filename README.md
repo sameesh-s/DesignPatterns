@@ -84,6 +84,22 @@ real life example: plug adapter(But in software scenario we can have multiple ad
 | Retrofitted                     | Built in advance           |
 | Provides different interface    | Both adapt multiple systems|
 
+## Bridge Pattern
+Bridge is very similar to adapter with the main difference being that the bridge works with new code whereas the adapter works with legacy code. 
+#### Concepts
+* Decouple Abstraction and implementation  
+* Encapsulation, Composition, Inheritance 
+* Changes in Abstraction won't affect client  
+* Details won't be right(to begin with, so that things won't break with changes)
+* Eg: Driver, JDBC 
+
+#### Design
+* Interfaces and Abstract classes
+* Composition over Inheritance  
+* More than Composition  
+* Expect change from both sides  
+* In UML : Abstraction, Implementor, Refined Abstraction, Concrete Implementor  
+![Bridge Pattern UML](https://github.com/sameesh-s/DesignPatterns/blob/main/BridgePattern.jpg?raw=true)
 
 ## Facade Pattern
 
