@@ -6,6 +6,13 @@
  
 > Program to interfaces, not implementation  
 
+Pattern Groups: 
+* Creational: 
+* Structural: How we utilize objects, performance , refactoring, memory utilization.
+	eg: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy  
+ 
+* Behavioral: 
+
 ## 2. Observer  
 A one-to-many relationship between a set of objects. When the state of one object changes, all of its dependents are notified. 
 Keeping your objects in the Know.  
@@ -42,6 +49,42 @@ Solution for class explosion related to inheritance.
 our goal is to allow classes to be easily extended to incorporate new behavior without modifying existing code. What do we get if we accomplish this? Designs that are resilient to change and flexible enough to take on new functionality to meet changing requirements.  
 [NOTE] be careful when choosing the areas of code that need to be extended, applying the Open-closed principle EVERYWHERE is wasteful and unnecessary, and can lead to complex, hard to understand code.  
 
+## Adapter Pattern  
+real life example: plug adapter(But in software scenario we can have multiple adaptors).  
+* Simple solution 
+* Easy to implement 
+* Integrate with Legacy  
+* Can provide multiple adapters  
+
+#### Concepts
+* Convert interface into another interface  
+* Translates requests  
+* Client, Adapter, Adaptee  
+* Eg: Arrays -> Lists, Streams  
+
+#### Design
+* Client centric
+* Integrate new with old
+* Interface, but not required  
+* Adaptee can be the implementation  
+![Adapter Pattern UML](https://github.com/sameesh-s/DesignPatterns/blob/main/AdapterPattern.jpg?raw=true)
+
+#### Pitfalls
+* Not a lot
+* Don't compolicate
+* Multiple adapters
+* Don't add functionality( if you add functionality with adapter then you should consider decorator or some other structural pattern)  
+
+#### Contrast to Other Patterns
+
+| Adapter                         | Bridge                     |
+|---------------------------------|---------------------------:|
+| Works after code is designed    | Designed upfront           |
+| Legacy                          | Abstraction and Impl vary  |
+| Retrofitted                     | Built in advance           |
+| Provides different interface    | Both adapt multiple systems|
+
+
 ## Facade Pattern
 
 Put a basic class and masks some of those things that were going on behind the object behind it, It's just dealing with making a simpler interface to the client.  
@@ -56,19 +99,19 @@ Put a basic class and masks some of those things that were going on behind the o
 	javax.faces.context.FacesContext  
 In case if build a JDBC components in facade pattern we will be hiding all the complex logic related to statement and connection management and all behind a facade and we will provide simple methods to the enduser to access like createTable() inside the facade and map all the complex methods inside facade method. 
 
-### Design
+#### Design
 * Class that utilizes composition 
 * Shouldn't have a need for inheritance( if you think you need inheritence you probably will need to use another pattern)    
 * Typically encompasses full lifecycle  
 ![Facade Pattern UML](https://github.com/sameesh-s/DesignPatterns/blob/main/FacadePattern.jpg?raw=true)
 
-### Pitfalls  
+#### Pitfalls  
 * Typically used to clean up code 
 * Should think about API design( if another pattern solve the problem then take that instead of Facade)  
 * Shouldn't use the inheritance so Facade uses Flat problem/structure  
 * The "Singleton" of Structural Pattern( often misused( to hide ugly things that are into the code) or overused in strucutral pattern)  
 
-### Contrast to Other patterns   
+#### Contrast to Other patterns   
 | Facade                        |Adapter                        |
 |-------------------------------|:-----------------------------:|
 |Simplifies Interface           | Also a Refactoring pattern    |
