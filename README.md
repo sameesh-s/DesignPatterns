@@ -8,16 +8,21 @@
 
 Pattern Groups: 
 * Creational:
-	1. Factory Method
-	2. Abstract Factory  
-	3. Builder  
-	4. Prototype  
-	5. Singleton  
+	1. Factory Method: Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.  
+	2. Abstract Factory: Lets you produce families of related objects without specifying their concrete classes.  
+	3. Builder: Lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code.    
+	4. Prototype: Lets you copy existing objects withoud making your code dependent on their classes.    
+	5. Singleton: Lets you ensure that a class has only one instance, while providing a global access point to this instance.   
  
 * Structural: How we utilize objects, performance , refactoring, memory utilization.
 	eg: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy  
  
 * Behavioral: 
+
+## 1. Factory Method   
+Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. The Factory Method pattern suggests that you replace direct object construction calls with calls to a special factory method. 
+FactoryMethodPattern.jpg   
+![Factory_Method_UML](https://github.com/sameesh-s/DesignPatterns/blob/main/FactoryMethodPattern.jpg?raw=true)  
 
 ## 2. Observer  
 A one-to-many relationship between a set of objects. When the state of one object changes, all of its dependents are notified. 
