@@ -7,7 +7,13 @@
 > Program to interfaces, not implementation  
 
 Pattern Groups: 
-* Creational: 
+* Creational:
+	1. Factory Method
+	2. Abstract Factory  
+	3. Builder  
+	4. Prototype  
+	5. Singleton  
+ 
 * Structural: How we utilize objects, performance , refactoring, memory utilization.
 	eg: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy  
  
@@ -135,4 +141,7 @@ In case if build a JDBC components in facade pattern we will be hiding all the c
 |Cleaner API                    | Provides a different API      |
 
 
- 
+
+
+Refactoring book contents ---> 
+Refactoring book notes ends --->  
