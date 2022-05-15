@@ -21,8 +21,21 @@ Pattern Groups:
 
 ## 1. Factory Method   
 Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. The Factory Method pattern suggests that you replace direct object construction calls with calls to a special factory method. 
-FactoryMethodPattern.jpg   
+  
 ![Factory_Method_UML](https://github.com/sameesh-s/DesignPatterns/blob/main/FactoryMethodPattern.jpg?raw=true)  
+
+* Use the Factory Method when you don't know beforehand the exact types and dependencies of the objects your code should work with.  
+* Use the Factory Method when you want to provide users of your library or framework a way to extend its internal components.  
+* Use the Factory Method when you want to save system resources by reusing existing objects instead of rebuilding them each time( using pool ).   
+* We can use Factory Method along with Iterator to let collection subclasses return different types of interators that are compatiable with the collections.  
+* Factory Method is a specialization of **Template Method**. At the same time, a Factory Method may serve as a step in a large Template Method.  
+
+## 2. Abstract Factory     
+**Abstract Factory** is a creational design pattern that lets you produce families of related objects without specifying their concrete classes. The first thing the Abstract Factory pattern suggests is to explicitly declare interfaces for each distinct product of the product family. The next move is to declare the Abstract Factory-an interface with a list of creation methods for all products that are part of the product familiy. Those methods must return **abstract** product types represented by the interfaces we extracted previously.  
+
+![Abstract Factory](https://github.com/sameesh-s/DesignPatterns/blob/main/AbstractFactory.jpg?raw=true)  
+
+* Use the Abstract Factory when the your code needs to work with various families of related products, but you don't want it to depend on the concreate classes of thos products-they mightbe unknown  beforehand or you simply want to allow for future extensibility.  
 
 ## 2. Observer  
 A one-to-many relationship between a set of objects. When the state of one object changes, all of its dependents are notified. 
