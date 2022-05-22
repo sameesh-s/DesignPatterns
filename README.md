@@ -1,3 +1,5 @@
+> The bigger the code grew, the messier it became.  
+
 # DesignPatterns
 
 >Encapsulate what varies
@@ -35,7 +37,7 @@ Factory Method is a creational design pattern that provides an interface for cre
 
 ![Abstract Factory](https://github.com/sameesh-s/DesignPatterns/blob/main/AbstractFactory.jpg?raw=true)  
 
-* Use the Abstract Factory when the your code needs to work with various families of related products, but you don't want it to depend on the concreate classes of thos products-they mightbe unknown  beforehand or you simply want to allow for future extensibility.  
+* Use the Abstract Factory when your code needs to work with various families of related products, but you don't want it to depend on the concreate classes of thos products-they mightbe unknown  beforehand or you simply want to allow for future extensibility.  
 
 ## 2. Observer  
 A one-to-many relationship between a set of objects. When the state of one object changes, all of its dependents are notified. 
@@ -161,5 +163,12 @@ In case if build a JDBC components in facade pattern we will be hiding all the c
 
 
 
-Refactoring book contents ---> 
+Refactoring book contents --->
+
+### Chain of Responsibility  
+behavioral design pattern that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.  
+eg:  Request => authentication +=> authorization +=> Validation +=> Caching +=> Ordering System   
+transforming particular behaviors into stand-alone objects called handlers.  
+ 
+![ChainOfResponsibility](https://github.com/sameesh-s/DesignPatterns/blob/main/ChainOfResponsibility.jpg?raw=true)  
 Refactoring book notes ends --->  
