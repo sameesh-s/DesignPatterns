@@ -177,5 +177,10 @@ transforming particular behaviors into stand-alone objects called handlers.
 * Use the pattern when it's essential to execute several handlers in a particular order.  
 * Use the CoR pattern when the set of handlers and their order are supposed to change at runtime.  
 
+### COMMAND 
+also known as: Action, Transaction  
+Behavioral design pattern that turns a request into a stand-alone object that contains all information about the request. This transformation lets you parameterize methods with different requests, delay or queue a request's execution, and support undoable operations.   
+  
+
 
 Refactoring book notes ends --->  
